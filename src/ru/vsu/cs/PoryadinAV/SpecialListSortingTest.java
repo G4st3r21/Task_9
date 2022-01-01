@@ -14,9 +14,9 @@ public class SpecialListSortingTest {
 
     @Test
     public void testNormalCase() throws FileNotFoundException {
-        int[] arrayList = ArrayUtils.readIntArrayFromFile("testSrc/testInput1.txt");
+        int[] arrayList = ArrayUtils.readIntArrayFromFile("testSrc/normalCase.txt");
 
-        int[] expectedResult = ArrayUtils.readIntArrayFromFile("testSrc/testOutput1.txt");
+        int[] expectedResult = ArrayUtils.readIntArrayFromFile("testSrc/normalCaseOutput.txt");
         List<Integer> list = program.specSortingList(ArrayUtils.toList(arrayList));
         int[] receivedResult = list.stream().mapToInt(i -> i).toArray();
 
@@ -26,9 +26,9 @@ public class SpecialListSortingTest {
 
     @Test
     public void testCaseWithUnusualInput() throws FileNotFoundException {
-        int[] arrayList = ArrayUtils.readIntArrayFromFile("testSrc/testInput2.txt");
+        int[] arrayList = ArrayUtils.readIntArrayFromFile("testSrc/caseWithUnusualInput.txt");
 
-        int[] expectedResult = ArrayUtils.readIntArrayFromFile("testSrc/testOutput2.txt");
+        int[] expectedResult = ArrayUtils.readIntArrayFromFile("testSrc/caseWithUnusualInputOutput.txt");
         int[] receivedResult = null;
 
         try {
@@ -42,9 +42,9 @@ public class SpecialListSortingTest {
 
     @Test
     public void testCaseWithUnusualInput2() throws FileNotFoundException {
-        int[] arrayList = ArrayUtils.readIntArrayFromFile("testSrc/testInput3.txt");
+        int[] arrayList = ArrayUtils.readIntArrayFromFile("testSrc/caseWithUnusualInput2.txt");
 
-        int[] expectedResult = ArrayUtils.readIntArrayFromFile("testSrc/testOutput3.txt");
+        int[] expectedResult = ArrayUtils.readIntArrayFromFile("testSrc/caseWithUnusualInputOutput2.txt");
         List<Integer> list = program.specSortingList(ArrayUtils.toList(arrayList));
         int[] receivedResult = list.stream().mapToInt(i -> i).toArray();
 
@@ -54,9 +54,9 @@ public class SpecialListSortingTest {
 
     @Test
     public void testCaseWithUnusualInput3() throws FileNotFoundException {
-        int[] arrayList = ArrayUtils.readIntArrayFromFile("testSrc/testInput4.txt");
+        int[] arrayList = ArrayUtils.readIntArrayFromFile("testSrc/caseWithUnusualInput3.txt");
 
-        int[] expectedResult = ArrayUtils.readIntArrayFromFile("testSrc/testOutput4.txt");
+        int[] expectedResult = ArrayUtils.readIntArrayFromFile("testSrc/caseWithUnusualInputOutput3.txt");
         List<Integer> list = program.specSortingList(ArrayUtils.toList(arrayList));
         int[] receivedResult = list.stream().mapToInt(i -> i).toArray();
 
@@ -66,9 +66,9 @@ public class SpecialListSortingTest {
 
     @Test
     public void testCaseWithBigInput() throws FileNotFoundException {
-        int[] arrayList = ArrayUtils.readIntArrayFromFile("testSrc/testInput5.txt");
+        int[] arrayList = ArrayUtils.readIntArrayFromFile("testSrc/caseWithBigInput.txt");
 
-        int[] expectedResult = ArrayUtils.readIntArrayFromFile("testSrc/testOutput5.txt");
+        int[] expectedResult = ArrayUtils.readIntArrayFromFile("testSrc/caseWithBigInputOutput.txt");
         List<Integer> list = program.specSortingList(ArrayUtils.toList(arrayList));
         int[] receivedResult = list.stream().mapToInt(i -> i).toArray();
 
