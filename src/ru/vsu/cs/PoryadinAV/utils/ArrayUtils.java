@@ -21,7 +21,7 @@ public class ArrayUtils {
         try {
             return toIntArray(readLinesFromFile(fileName)[0]);
         }
-        catch(FileNotFoundException | ArrayIndexOutOfBoundsException e) {
+        catch (FileNotFoundException | ArrayIndexOutOfBoundsException e) {
             return null;
         }
     }
@@ -36,27 +36,6 @@ public class ArrayUtils {
             // обязательно, чтобы закрыть открытый файл
         }
         return lines.toArray(new String[0]);
-    }
-
-
-
-    public static int[] readIntArrayFromConsole(String arrName) {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            try {
-                if (arrName == null || arrName.length() == 0) {
-                    arrName = "";
-                } else {
-                    arrName = " " + arrName;
-                }
-                System.out.printf("Введите массив%s:%n", arrName);
-                String line = scanner.nextLine();
-                return toIntArray(line);
-            }
-            catch(Exception e) {
-                System.out.print("Вы ошиблись, попробуйте еще раз! ");
-            }
-        }
     }
 
     public static int[] toIntArray(String str) {
